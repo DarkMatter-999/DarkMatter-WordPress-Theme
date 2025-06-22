@@ -1,0 +1,26 @@
+.hero-name {
+  font-style: normal;
+  font-size: 6rem;
+  line-height: 7rem;
+  background-color: rgb(255, 153, 213);
+  background-image: var(--wp--preset--gradient--hero-gradient);
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: 5s linear 0s infinite alternate none running rotateName;
+}
+
+@keyframes rotateName {
+  0% {
+    background-position: 0 0;
+  }
+  33% {
+    background-position: 100% 0;
+  }
+  66% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
