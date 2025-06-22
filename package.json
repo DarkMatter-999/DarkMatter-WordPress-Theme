@@ -1,0 +1,24 @@
+{
+  "name": "darkmatter-theme",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/DarkMatter-999/DarkMatter-WordPress-Theme#readme",
+  "bugs": {
+    "url": "https://github.com/DarkMatter-999/DarkMatter-WordPress-Theme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkMatter-999/DarkMatter-WordPress-Theme.git"
+  },
+  "license": "ISC",
+  "author": "DarkMatter-999",
+  "type": "commonjs",
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=./assets/src/blocks/ --output-path=./assets/build/blocks/",
+    "build": "wp-scripts build --webpack-src-dir=./assets/src/blocks/ --output-path=./assets/build/blocks/",
+    "build:assets": "wp-scripts build ./assets/src/js/*js --output-path=./assets/build/js/"
+  },
+  "dependencies": {
+    "@wordpress/scripts": "^30.18.0"
+  }
+}
