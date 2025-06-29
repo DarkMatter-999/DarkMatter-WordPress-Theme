@@ -9,50 +9,46 @@
 
 namespace DarkMatter\Traits;
 
-trait Singleton
-{
-    /**
-     * Instance of the singleton class.
-     *
-     * @var self
-     */
-    private static $instance = null;
+trait Singleton {
 
-    /**
-     * Get the singleton instance
-     *
-     * @return self
-     */
-    public static function get_instance()
-    {
-        if (null === self::$instance ) {
-            self::$instance = new self();
-        }
-        return self::$instance;
-    }
+	/**
+	 * Instance of the singleton class.
+	 *
+	 * @var self
+	 */
+	private static $instance = null;
 
-    /**
-     * __construct
-     *
-     * @return void
-     */
-    private function __construct()
-    { 
-    }
-    /**
-     * __clone
-     *
-     * @return void
-     */
-    public function __clone()
-    { 
-    }
-    /**
-     * __wakeup
-     *
-     * @return void
-     */
-    public function __wakeup()
-    { 
-    }
+	/**
+	 * Get the singleton instance
+	 *
+	 * @return self
+	 */
+	public static function get_instance() {
+		if ( null === self::$instance ) {
+			self::$instance = new self();
+		}
+		return self::$instance;
+	}
+
+	/**
+	 * __construct
+	 *
+	 * @return void
+	 */
+	private function __construct() {
+	}
+	/**
+	 * __clone
+	 *
+	 * @return void
+	 */
+	public function __clone() {
+	}
+	/**
+	 * __wakeup
+	 *
+	 * @return void
+	 */
+	public function __wakeup() {
+	}
 }

@@ -18,62 +18,69 @@ use DarkMatter\Traits\Singleton;
  *
  * @since 1.0.0
  **/
-class Assets
-{
+class Assets {
 
-    use Singleton;
 
-    /**
-     * Constructor for DarkMatter Theme Screen TimeAssets
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        add_action('enqueue_block_assets', array( $this, 'enqueue_assets' ));
-        add_action('enqueue_block_editor_assets', array($this, 'enqueue_block_assets'));
-    }
+	use Singleton;
 
-    /**
-     * Enqueues styles and scripts for the theme.
-     *
-     * @return void
-     */
-    public function enqueue_assets()
-    {
-        $style_asset = include get_theme_file_path('assets/build/css/screen.asset.php');
-        wp_enqueue_style(
-            'main',
-            get_theme_file_uri('assets/build/css/screen.css'),
-            $style_asset['dependencies'],
-            $style_asset['version']
-        );
+	/**
+	 * Constructor for DarkMatter Theme Assets
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		add_action( 'enqueue_block_assets', array( $this, 'enqueue_assets' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_assets' ) );
+	}
 
-        $script_asset = include get_theme_file_path('assets/build/js/screen.asset.php');
+	/**
+	 * Enqueues styles and scripts for the theme.
+	 *
+	 * @return void
+	 */
+	public function enqueue_assets() {
+		$style_asset = include get_theme_file_path( 'assets/build/css/screen.asset.php' );
+		wp_enqueue_style(
+			'main',
+			get_theme_file_uri( 'assets/build/css/screen.css' ),
+			$style_asset['dependencies'],
+			$style_asset['version']
+		);
 
-        wp_enqueue_script(
-            'main-js',
-            get_theme_file_uri('assets/build/js/screen.js'),
-            $script_asset['dependencies'],
-            $script_asset['version'],
-            true
-        );
-    }
+		if ( is_home() ) {
+			$home_styles = include get_theme_file_path( 'assets/build/css/home.asset.php' );
+				wp_enqueue_style(
+					'home',
+					get_theme_file_uri( 'assets/build/css/home.css' ),
+					$style_asset['dependencies'],
+					$style_asset['version']
+				);
+		}
 
-    /**
-     * Enqueues styles and scripts for the block editor.
-     *
-     * @return void
-     */
-    public function enqueue_block_assets()
-    {
-        $style_asset = include get_theme_file_path('assets/build/css/editor.asset.php');
+		$script_asset = include get_theme_file_path( 'assets/build/js/screen.asset.php' );
 
-        wp_enqueue_style(
-            'main-editor',
-            get_theme_file_uri('assets/build/css/editor.css'),
-            $style_asset['dependencies'],
-            $style_asset['version']
-        );
-    }
+		wp_enqueue_script(
+			'main-js',
+			get_theme_file_uri( 'assets/build/js/screen.js' ),
+			$script_asset['dependencies'],
+			$script_asset['version'],
+			true
+		);
+	}
+
+	/**
+	 * Enqueues styles and scripts for the block editor.
+	 *
+	 * @return void
+	 */
+	public function enqueue_block_assets() {
+		$style_asset = include get_theme_file_path( 'assets/build/css/editor.asset.php' );
+
+		wp_enqueue_style(
+			'main-editor',
+			get_theme_file_uri( 'assets/build/css/editor.css' ),
+			$style_asset['dependencies'],
+			$style_asset['version']
+		);
+	}
 }

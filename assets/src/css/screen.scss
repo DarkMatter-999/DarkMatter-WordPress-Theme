@@ -1,26 +1,80 @@
+.wp-block-navigation__responsive-container {
+	background-color: var(--wp--preset--color--base) !important;
+	color: var(--wp--preset--color--contrast) !important;
+}
+
 .hero-name {
-  font-style: normal;
-  font-size: 6rem;
-  line-height: 7rem;
-  background-color: rgb(255, 153, 213);
-  background-image: var(--wp--preset--gradient--hero-gradient);
-  background-clip: text;
-  color: transparent;
-  background-size: 200% 100%;
-  animation: 5s linear 0s infinite alternate none running rotateName;
+	font-style: normal;
+	font-size: 6rem;
+	line-height: 1.5;
+	background-color: rgb(255, 153, 213);
+	background-image: var(--wp--preset--gradient--hero-gradient);
+	background-clip: text;
+	color: transparent;
+	background-size: 200% 100%;
+	animation: 5s linear 0s infinite alternate none running rotateName;
 }
 
 @keyframes rotateName {
-  0% {
-    background-position: 0 0;
-  }
-  33% {
-    background-position: 100% 0;
-  }
-  66% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0 100%;
-  }
+
+	0% {
+		background-position: 0 0;
+	}
+
+	33% {
+		background-position: 100% 0;
+	}
+
+	66% {
+		background-position: 100% 100%;
+	}
+
+	100% {
+		background-position: 0 100%;
+	}
+}
+
+.wp-block-button__link {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.wp-block-button__link span {
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	background-color: var(--wp--preset--color--tertiery);
+	transform: translateY(150%);
+	border-radius: 50%;
+	left: calc((var(--n) - 1) * 25%);
+	transition: 0.5s;
+	transition-delay: calc((var(--n) - 1) * 0.1s);
+	z-index: -1;
+}
+
+.wp-block-button__link:hover {
+	color: var(--wp--preset--color--contrast);
+	text-shadow: 0 0 20px var(--wp--preset--color--contrast);
+}
+
+.wp-block-button__link:hover span {
+	transform: translateY(0) scale(2);
+}
+
+.wp-block-button__link span:nth-child(1) {
+	--n: 1;
+}
+
+.wp-block-button__link span:nth-child(2) {
+	--n: 2;
+}
+
+.wp-block-button__link span:nth-child(3) {
+	--n: 3;
+}
+
+.wp-block-button__link span:nth-child(4) {
+	--n: 4;
 }

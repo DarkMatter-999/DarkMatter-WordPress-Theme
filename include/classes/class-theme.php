@@ -18,44 +18,41 @@ use DarkMatter\Traits\Singleton;
  *
  * @since 1.0.0
  **/
-class Theme
-{
+class Theme {
 
-    use Singleton;
 
-    /**
-     * Constructor for DarkMatter Theme
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        add_action('after_setup_theme', array( $this, 'setup' ));
-        add_filter('mime_types', array($this, 'svg_upload_support'));
+	use Singleton;
 
-        Assets::get_instance();
+	/**
+	 * Constructor for DarkMatter Theme
+	 *
+	 * @return void
+	 */
+	public function __construct() {
+		add_action( 'after_setup_theme', array( $this, 'setup' ) );
+		add_filter( 'mime_types', array( $this, 'svg_upload_support' ) );
 
-    }
+		Assets::get_instance();
+		Blocks::get_instance();
+	}
 
-    /**
-     * Sets up theme defaults and registers support for various WordPress features.
-     *
-     * @return void
-     */
-    public function setup()
-    {
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * @return void
+	 */
+	public function setup() {
+	}
 
-    }
+	/**
+	 * Add support for uploading SVG files
+	 *
+	 * @param array $types Mime Types.
+	 * @return array
+	 */
+	public function svg_upload_support( $types ) {
+		$types['svg'] = 'image/svg+xml';
 
-    /**
-     * Add support for uploading SVG files
-     *
-     * @return array
-     */
-    public function svg_upload_support( $types )
-    {
-        $types['svg'] = 'image/svg+xml';
-
-        return $types;
-    }
+		return $types;
+	}
 }
