@@ -9,8 +9,8 @@
 ?>
 
 
-<!-- wp:group {"layout":{"type":"constrained","contentSize":"1001px"}} -->
-<div class="wp-block-group">
+<!-- wp:group {"className":"dm-hero","layout":{"type":"constrained","contentSize":"1001px"}} -->
+<div class="wp-block-group dm-hero">
 
 	<!-- wp:html -->
 	<div class="dm-bubbles"><span style="--i: 37;"></span><span style="--i: 30;"></span><span style="--i: 39;"></span><span style="--i: 12;"></span><span style="--i: 16;"></span><span style="--i: 22;"></span><span style="--i: 43;"></span><span style="--i: 14;"></span><span style="--i: 23;"></span><span style="--i: 35;"></span><span style="--i: 48;"></span><span style="--i: 35;"></span><span style="--i: 22;"></span><span style="--i: 15;"></span><span style="--i: 34;"></span><span style="--i: 44;"></span><span style="--i: 18;"></span><span style="--i: 41;"></span><span style="--i: 28;"></span><span style="--i: 10;"></span><span style="--i: 40;"></span><span style="--i: 22;"></span><span style="--i: 35;"></span><span style="--i: 41;"></span><span style="--i: 48;"></span><span style="--i: 11;"></span><span style="--i: 18;"></span><span style="--i: 38;"></span><span style="--i: 18;"></span></div>

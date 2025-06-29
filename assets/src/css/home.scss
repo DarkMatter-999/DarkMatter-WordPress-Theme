@@ -1,31 +1,41 @@
-.dm-bubbles {
-	position: relative;
-	display: flex;
-	z-index: -99;
-	width: 100%;
-	justify-content: space-around;
+.dm-hero {
 
-	span {
+	.wp-block-media-text {
 		position: relative;
-		width: 10px;
-		height: 10px;
-		opacity: 0.7;
-		background-color: #8a00ff;
-		margin: 0 4px;
-		border-radius: 50%;
-		filter: blur(3px);
-		animation: bubbles 15s linear infinite;
-		animation-duration: calc(120s / var(--i));
-
-		&:nth-child(3n+1) {
-			background-color: #df00ff;
-		}
-
-		&:nth-child(3n+2) {
-			background-color: #fff;
-		}
+		z-index: 10;
+		margin-top: 0;
 	}
 
+	.dm-bubbles {
+		position: relative;
+		display: flex;
+		z-index: -99;
+		width: 100%;
+		justify-content: space-around;
+
+		span {
+			position: relative;
+			width: 10px;
+			height: 10px;
+			opacity: 0.7;
+			background-color: #8a00ff;
+			margin: 0 4px;
+			border-radius: 50%;
+			filter: blur(3px);
+			animation: bubbles 15s linear infinite;
+			animation-duration: calc(120s / var(--i));
+
+			&:nth-child(3n+1) {
+				background-color: #df00ff;
+			}
+
+			&:nth-child(3n+2) {
+				background-color: #fff;
+			}
+
+
+		}
+	}
 }
 
 @keyframes bubbles {

@@ -1,18 +1,78 @@
+main {
+	margin: 0;
+}
+
 .wp-block-navigation__responsive-container {
 	background-color: var(--wp--preset--color--base) !important;
 	color: var(--wp--preset--color--contrast) !important;
 }
 
-.hero-name {
-	font-style: normal;
-	font-size: 6rem;
-	line-height: 1.5;
-	background-color: rgb(255, 153, 213);
-	background-image: var(--wp--preset--gradient--hero-gradient);
-	background-clip: text;
-	color: transparent;
-	background-size: 200% 100%;
-	animation: 5s linear 0s infinite alternate none running rotateName;
+.dm-hero {
+
+	/* background-color: var(--wp--preset--color--base); */
+
+	.hero-name {
+		font-style: normal;
+		font-size: 6rem;
+		line-height: 1.5;
+		background-color: rgb(255, 153, 213);
+		background-image: var(--wp--preset--gradient--hero-gradient);
+		background-clip: text;
+		color: transparent;
+		background-size: 200% 100%;
+		animation: 5s linear 0s infinite alternate none running rotateName;
+	}
+}
+
+.wp-block-button__link {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.wp-block-button__link:hover {
+	color: var(--wp--preset--color--contrast);
+	text-shadow: 0 0 20px var(--wp--preset--color--contrast);
+}
+
+.dm-projects {
+	margin: 1.5rem 1rem;
+
+	.wp-block-dm-project-plugin-project-block {
+		padding: 2rem;
+		margin: 1.5rem;
+		background: var(--wp--preset--gradient--primary-gradient);
+		border: 1px solid var(--wp--preset--color--border-muted);
+		border-top: 1px solid var(--wp--preset--color--highlight);
+		border-radius: 1rem;
+		box-shadow: var(--wp--preset--color--shadow);
+
+		.wp-block-media-text {
+			gap: 1.5rem;
+		}
+
+		h3 {
+			margin: 1.5rem 0;
+			font-size: var(--wp--preset--font-size--extra-large);
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		figure img {
+			border-radius: 1rem;
+		}
+
+		.wp-block-button__link {
+			margin: 0;
+		}
+
+		&:hover {
+			background: var(--wp--preset--gradient--primary-gradient-hover);
+		}
+	}
 }
 
 @keyframes rotateName {
@@ -34,12 +94,6 @@
 	}
 }
 
-.wp-block-button__link {
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
-	transition: 0.5s;
-}
 
 .wp-block-button__link span {
 	position: absolute;
@@ -52,11 +106,6 @@
 	transition: 0.5s;
 	transition-delay: calc((var(--n) - 1) * 0.1s);
 	z-index: -1;
-}
-
-.wp-block-button__link:hover {
-	color: var(--wp--preset--color--contrast);
-	text-shadow: 0 0 20px var(--wp--preset--color--contrast);
 }
 
 .wp-block-button__link:hover span {

@@ -58,6 +58,11 @@
           "name": "Tertiary",
           "slug": "tertiery",
           "color": "hsl(272 100% 50%)"
+        },
+        {
+          "name": "Shadow",
+          "slug": "shadow",
+          "color": "0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1)"
         }
       ],
       "gradients": [
@@ -182,7 +187,7 @@
   "styles": {
     "color": {
       "text": "var(--wp--preset--color--contrast)",
-      "background": "var(--wp--preset--color--base)"
+      "background": "var(--wp--preset--color--base-dark)"
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--poppins)"
