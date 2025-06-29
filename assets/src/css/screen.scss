@@ -1,3 +1,14 @@
+html,
+body {
+	cursor: url(../../images/pointinghand.svg) 4 4, url(../../images/pointinghand.png) 4 4, default;
+}
+
+a,
+button,
+[role="button"] {
+	cursor: url(../../images/closedhand.svg) 4 4, url(../../images/closedhand.png) 4 4, pointer;
+}
+
 main {
 	margin: 0;
 }
@@ -24,14 +35,16 @@ main {
 	}
 }
 
-.wp-block-button__link {
+.wp-block-button__link,
+.wp-block-read-more {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
 	transition: 0.5s;
 }
 
-.wp-block-button__link:hover {
+.wp-block-button__link:hover,
+.wp-block-read-more:hover {
 	color: var(--wp--preset--color--contrast);
 	text-shadow: 0 0 20px var(--wp--preset--color--contrast);
 }
@@ -40,8 +53,6 @@ main {
 	margin: 1.5rem 1rem;
 
 	.wp-block-dm-project-plugin-project-block {
-		padding: 2rem;
-		margin: 1.5rem;
 		background: var(--wp--preset--gradient--primary-gradient);
 		border: 1px solid var(--wp--preset--color--border-muted);
 		border-top: 1px solid var(--wp--preset--color--highlight);
@@ -50,6 +61,7 @@ main {
 
 		.wp-block-media-text {
 			gap: 1.5rem;
+			padding: 2rem;
 		}
 
 		h3 {
@@ -75,6 +87,32 @@ main {
 	}
 }
 
+.dm-blog {
+	margin: 1.5rem 1rem;
+
+	.wp-block-query {
+
+		ul li {
+			padding: 2rem;
+			margin: 1.5rem;
+			background: var(--wp--preset--gradient--primary-gradient);
+			border: 1px solid var(--wp--preset--color--border-muted);
+			border-top: 1px solid var(--wp--preset--color--highlight);
+			border-radius: 1rem;
+			box-shadow: var(--wp--preset--color--shadow);
+
+			&:hover {
+				background: var(--wp--preset--gradient--primary-gradient-hover);
+			}
+		}
+	}
+
+	.wp-block-read-more {
+		width: 100%;
+		margin: 0;
+	}
+}
+
 @keyframes rotateName {
 
 	0% {
@@ -95,7 +133,8 @@ main {
 }
 
 
-.wp-block-button__link span {
+.wp-block-button__link span,
+.wp-block-read-more span {
 	position: absolute;
 	width: 25%;
 	height: 100%;
@@ -108,22 +147,27 @@ main {
 	z-index: -1;
 }
 
-.wp-block-button__link:hover span {
+.wp-block-button__link:hover span,
+.wp-block-read-more:hover span {
 	transform: translateY(0) scale(2);
 }
 
-.wp-block-button__link span:nth-child(1) {
+.wp-block-button__link span:nth-child(1),
+.wp-block-read-more span:nth-child(2) {
 	--n: 1;
 }
 
-.wp-block-button__link span:nth-child(2) {
+.wp-block-button__link span:nth-child(2),
+.wp-block-read-more span:nth-child(3) {
 	--n: 2;
 }
 
-.wp-block-button__link span:nth-child(3) {
+.wp-block-button__link span:nth-child(3),
+.wp-block-read-more span:nth-child(4) {
 	--n: 3;
 }
 
-.wp-block-button__link span:nth-child(4) {
+.wp-block-button__link span:nth-child(4),
+.wp-block-read-more span:nth-child(5) {
 	--n: 4;
 }

@@ -4,10 +4,18 @@
 <main class="wp-block-group">
   <!-- wp:template-part {"slug":"hero","theme":"darkmatter"} /-->
 
-<!-- wp:group {"className":"dm-projects","layout":{"type":"constrained","contentSize":"800px"}} -->
-<div class="wp-block-group dm-projects">
-    <!-- wp:heading -->
-    <h2 class="wp-block-heading">Projects</h2>
+  <!-- wp:group {"className":"dm-projects","layout":{"type":"constrained","contentSize":"800px"}} -->
+  <div class="wp-block-group dm-projects">
+    <!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"fontSize":"xxl"} -->
+    <h2
+      class="wp-block-heading has-xxl-font-size"
+      style="
+        margin-top: var(--wp--preset--spacing--80);
+        margin-bottom: var(--wp--preset--spacing--80);
+      "
+    >
+      Projects
+    </h2>
     <!-- /wp:heading -->
 
     <!-- wp:dm-project-plugin/project-block -->
@@ -25,9 +33,41 @@
     <!-- wp:dm-project-plugin/project-block -->
     <div class="wp-block-dm-project-plugin-project-block"></div>
     <!-- /wp:dm-project-plugin/project-block -->
-</div>
-<!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 
+  <!-- wp:group {"className":"dm-blog","layout":{"type":"constrained","contentSize":"800px"}} -->
+  <div class="wp-block-group dm-blog">
+    <!-- wp:heading {"style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}},"fontSize":"xxl"} -->
+    <h2
+      class="wp-block-heading has-xxl-font-size"
+      style="
+        margin-top: var(--wp--preset--spacing--80);
+        margin-bottom: var(--wp--preset--spacing--80);
+      "
+    >
+      Latest Posts
+    </h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:query {"queryId":4,"query":{"perPage":5,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[],"format":[]},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"constrained"}} -->
+    <!-- wp:media-text {"mediaType":"image","imageFill":true,"useFeaturedImage":true} -->
+    <div class="wp-block-media-text is-stacked-on-mobile is-image-fill-element"><figure class="wp-block-media-text__media"></figure><div class="wp-block-media-text__content"><!-- wp:post-title /-->
+
+    <!-- wp:post-excerpt /-->
+
+    <!-- wp:read-more /--></div></div>
+    <!-- /wp:media-text -->
+    <!-- /wp:post-template -->
+
+    <!-- wp:query-no-results -->
+    <!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results."} -->
+    <p>No Posts available.</p>
+    <!-- /wp:paragraph -->
+    <!-- /wp:query-no-results --></div>
+    <!-- /wp:query --></div>
+  <!-- /wp:group -->
 </main>
 <!-- /wp:group -->
 

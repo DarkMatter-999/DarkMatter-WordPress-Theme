@@ -225,6 +225,39 @@
           "width": "0.3em",
           "style": "solid"
         }
+      },
+      "core/read-more": {
+        "color": {
+          "text": "var(--wp--preset--color--tertiery)",
+          "background": "rgba(0, 0, 0, 0.0)"
+        },
+        "typography": {
+          "fontWeight": "700",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em",
+          "textAlign": "center",
+          "lineHeight": "3em"
+        },
+        "spacing": {
+          "margin": {
+            "top": "1em",
+            "left": "1em",
+            "bottom": "1em",
+            "right": "1em"
+          },
+          "padding": {
+            "top": "0",
+            "left": "0",
+            "bottom": "0",
+            "right": "0"
+          }
+        },
+        "border": {
+          "radius": "0.5em",
+          "color": "var(--wp--preset--color--tertiery)",
+          "width": "0.3em",
+          "style": "solid"
+        }
       }
     },
     "elements": {

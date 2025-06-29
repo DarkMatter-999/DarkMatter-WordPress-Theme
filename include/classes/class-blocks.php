@@ -30,6 +30,7 @@ class Blocks {
 	 */
 	public function __construct() {
 			add_filter( 'render_block_core/button', array( $this, 'custom_button_markup' ), 16, 2 );
+			add_filter( 'render_block_core/read-more', array( $this, 'custom_button_markup' ), 16, 2 );
 	}
 
 	/**
@@ -43,6 +44,16 @@ class Blocks {
 		if ( isset( $block['blockName'] ) && 'core/button' === $block['blockName'] ) {
 			$block_content = preg_replace_callback(
 				'/(<a\b[^>]*class="[^"]*wp-block-button__link[^"]*"[^>]*>)(.*?)(<\/a>)/s',
+				function ( $matches ) {
+					$new_content = $matches[1] . $matches[2]
+						. '<span></span><span></span><span></span><span></span>' . $matches[3];
+					return $new_content;
+				},
+				$block_content
+			);
+		} elseif ( isset( $block['blockName'] ) && 'core/read-more' === $block['blockName'] ) {
+			$block_content = preg_replace_callback(
+				'/(<a\b[^>]*class="[^"]*wp-block-read-more[^"]*"[^>]*>)(.*?)(<\/a>)/s',
 				function ( $matches ) {
 					$new_content = $matches[1] . $matches[2]
 						. '<span></span><span></span><span></span><span></span>' . $matches[3];
