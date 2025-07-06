@@ -1,0 +1,94 @@
+<!-- wp:template-part {"slug":"header","theme":"darkmatter","tagName":"header","className":"site-header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"},"padding":{"top":"0","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"800px"}} -->
+<main
+  class="wp-block-group"
+  style="
+    margin-top: var(--wp--preset--spacing--20);
+    margin-bottom: var(--wp--preset--spacing--20);
+    padding-top: 0;
+    padding-bottom: var(--wp--preset--spacing--50);
+  "
+>
+  <!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+  <div
+    class="wp-block-group"
+    style="
+      padding-top: var(--wp--preset--spacing--50);
+      padding-right: var(--wp--preset--spacing--50);
+      padding-bottom: var(--wp--preset--spacing--50);
+      padding-left: var(--wp--preset--spacing--50);
+    "
+  >
+    <!-- wp:heading {"level":1,"fontSize":"xxl"} -->
+    <h1 class="wp-block-heading has-xxl-font-size">404: Page not found.</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph -->
+    <p>The page you are looking for was not found.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:paragraph -->
+    <p>Maybe try a search.</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:search {"label":"Search","showLabel":false,"width":100,"widthUnit":"%","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"style":{"spacing":{"margin":{"right":"0","left":"0"}}},"backgroundColor":"border-muted"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:group {"className":"dm-blog","layout":{"type":"constrained","contentSize":"800px"}} -->
+  <div class="wp-block-group dm-blog">
+    <!-- wp:heading {"level":1} -->
+    <h1 class="wp-block-heading">Latest Posts</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:query {"queryId":4,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[],"format":[]},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-query">
+      <!-- wp:post-template {"layout":{"type":"constrained"}} -->
+      <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+      <div class="wp-block-group">
+        <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","width":"50%","sizeSlug":"full","style":{"layout":{"selfStretch":"fill","flexSize":null}}} /-->
+
+        <!-- wp:group {"style":{"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group">
+          <!-- wp:post-title /-->
+
+          <!-- wp:post-date /-->
+
+          <!-- wp:post-excerpt /-->
+        </div>
+        <!-- /wp:group -->
+      </div>
+      <!-- /wp:group -->
+      <!-- /wp:post-template -->
+
+      <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+      <!-- wp:query-pagination-previous /-->
+
+      <!-- wp:query-pagination-numbers /-->
+
+      <!-- wp:query-pagination-next /-->
+      <!-- /wp:query-pagination -->
+
+      <!-- wp:query-no-results -->
+      <!-- wp:paragraph {"placeholder":"Add text or blocks that will display when a query returns no results.","style":{"spacing":{"margin":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"}}}} -->
+      <p
+        style="
+          margin-top: var(--wp--preset--spacing--80);
+          margin-bottom: var(--wp--preset--spacing--80);
+          padding-top: var(--wp--preset--spacing--80);
+          padding-bottom: var(--wp--preset--spacing--80);
+        "
+      >
+        No Posts available.
+      </p>
+      <!-- /wp:paragraph -->
+      <!-- /wp:query-no-results -->
+    </div>
+    <!-- /wp:query -->
+  </div>
+  <!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"darkmatter","tagName":"footer","className":"site-footer"} /-->
