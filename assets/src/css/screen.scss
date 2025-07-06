@@ -242,3 +242,18 @@ main {
 		}
 	}
 }
+
+.wp-block-search__inside-wrapper {
+	border: none;
+
+	.wp-block-search__input {
+		border-top-left-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
+	}
+
+	.wp-block-search__button {
+		border-top-right-radius: 0.5rem;
+		border-bottom-right-radius: 0.5rem;
+		margin: 0;
+	}
+}
