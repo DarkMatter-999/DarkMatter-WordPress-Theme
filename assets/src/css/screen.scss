@@ -217,20 +217,28 @@ main {
 	--n: 4;
 }
 
-input,
-textarea {
-	color: var(--wp--preset--color--contrast);
-	background-color: var(--wp--preset--color--base-light);
-	margin: 1rem auto;
-	border-radius: 1rem;
-	border: 1px solid var(--wp--preset--color--border) !important;
-	outline: none;
-}
+.wp-block-comments {
 
-input[type="checkbox"] {
-	accent-color: var(--wp--preset--color--tertiery);
-}
+	input,
+	textarea {
+		color: var(--wp--preset--color--contrast);
+		background-color: var(--wp--preset--color--base-light);
+		margin: 1rem auto;
+		border-radius: 0.5rem;
+		border: 1px solid var(--wp--preset--color--border) !important;
+		outline: none;
+	}
 
-input[type="submit"] {
-	padding: 0 1rem;
+	input[type="checkbox"] {
+		accent-color: var(--wp--preset--color--tertiery);
+	}
+
+	input[type="submit"] {
+		padding: 0 1rem;
+		color: var(--wp--preset--color--tertiery);
+
+		&:hover {
+			color: var(--wp--preset--color--contrast);
+		}
+	}
 }
