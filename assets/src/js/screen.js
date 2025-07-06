@@ -1,5 +1,17 @@
 document.addEventListener( 'DOMContentLoaded', ( e ) => {
 	e.preventDefault();
+
+	const header = document.querySelector( '.dm-header' );
+	window.addEventListener( 'scroll', function () {
+		if ( header ) {
+			if ( window.scrollY > 200 ) {
+				header.classList.add( 'slidedown' );
+			} else {
+				header.classList.remove( 'slidedown' );
+			}
+		}
+	} );
+
 	const homeFooter = document.querySelector( '.dm-footer-home' );
 
 	if ( homeFooter ) {

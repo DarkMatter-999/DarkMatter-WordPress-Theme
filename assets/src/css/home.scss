@@ -85,21 +85,21 @@
 		padding: 20px;
 	}
 
-	ul li a:link,
-	a:visited {
-		color: var(--wp--preset--color--contrast);
-	}
-
 	ul li a {
 		text-decoration: underline;
 		text-decoration-style: dashed;
 		text-decoration-color: var(--wp--preset--color--tertiery);
 		text-decoration-thickness: 0.35rem;
 		text-underline-offset: 0.5rem;
-	}
 
-	ul li a:hover {
-		color: #aaa;
+		&:link,
+		&:visited {
+			color: var(--wp--preset--color--contrast);
+		}
+
+		&:hover {
+			color: #aaa;
+		}
 	}
 
 	p {

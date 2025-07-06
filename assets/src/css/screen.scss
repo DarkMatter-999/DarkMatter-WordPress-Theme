@@ -1,5 +1,4 @@
-html,
-body {
+html {
 	cursor: url(../../images/pointinghand.svg) 4 4, url(../../images/pointinghand.png) 4 4, default;
 	scroll-behavior: smooth;
 }
@@ -15,9 +14,45 @@ header {
 }
 
 .dm-header {
-	position: fixed;
 	width: 100%;
 	z-index: 10;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	transition: all 0s ease;
+
+	&.slidedown {
+		position: fixed;
+		animation: slidedown 0.3s forwards;
+		max-width: var(--wp--style--global--content-size);
+		left: 0;
+		right: 0;
+		margin: 1rem auto !important;
+
+		background: none !important;
+		border: 1px solid var(--wp--preset--color--border-muted);
+		border-top: 1px solid var(--wp--preset--color--highlight);
+		border-radius: 1.5rem;
+		box-shadow: var(--wp--preset--color--shadow);
+
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+
+	}
+}
+
+
+@keyframes slidedown {
+
+	from {
+		top: -250px;
+	}
+
+	to {
+		top: 0;
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+	}
 }
 
 main {
