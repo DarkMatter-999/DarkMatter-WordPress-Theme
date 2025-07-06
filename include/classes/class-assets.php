@@ -47,7 +47,7 @@ class Assets {
 			$style_asset['version']
 		);
 
-		if ( is_home() ) {
+		if ( is_front_page() ) {
 			$home_styles = include get_theme_file_path( 'assets/build/css/home.asset.php' );
 				wp_enqueue_style(
 					'home',
