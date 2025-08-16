@@ -13,6 +13,12 @@ header {
 	height: 5rem;
 }
 
+.wp-block-navigation__responsive-container {
+	background-color: var(--wp--preset--color--base) !important;
+	color: var(--wp--preset--color--contrast) !important;
+	padding: 1.5rem !important;
+}
+
 .dm-header {
 	width: 100%;
 	z-index: 10;
@@ -40,6 +46,17 @@ header {
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 
+		.wp-block-navigation__responsive-container {
+			width: calc(100vw - 2 * 1.5rem);
+			height: calc(100vh - 2 * 1.5rem);
+		}
+
+		@media screen and (max-width: 600px) {
+			width: 100%;
+			border: none;
+			margin: 0 !important;
+			border-radius: 0;
+		}
 	}
 }
 
@@ -58,11 +75,6 @@ header {
 
 main {
 	margin: var(--wp--preset--spacing--40);
-}
-
-.wp-block-navigation__responsive-container {
-	background-color: var(--wp--preset--color--base) !important;
-	color: var(--wp--preset--color--contrast) !important;
 }
 
 .dm-hero {
