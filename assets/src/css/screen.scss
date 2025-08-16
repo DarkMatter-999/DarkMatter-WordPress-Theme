@@ -16,7 +16,6 @@ header {
 .wp-block-navigation__responsive-container {
 	background-color: var(--wp--preset--color--base) !important;
 	color: var(--wp--preset--color--contrast) !important;
-	padding: 1.5rem !important;
 }
 
 .dm-header {
@@ -27,6 +26,15 @@ header {
 	left: 01;
 	right: 0;
 	transition: all 0s ease;
+
+	$nav-padding: 1.5rem;
+
+	@media screen and (max-width: 600px) {
+
+		.wp-block-navigation__responsive-container {
+			padding: $nav-padding !important;
+		}
+	}
 
 	&.slidedown {
 		position: fixed;
@@ -46,16 +54,16 @@ header {
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 
-		.wp-block-navigation__responsive-container {
-			width: calc(100vw - 2 * 1.5rem);
-			height: calc(100vh - 2 * 1.5rem);
-		}
-
 		@media screen and (max-width: 600px) {
 			width: 100%;
 			border: none;
 			margin: 0 !important;
 			border-radius: 0;
+
+			.wp-block-navigation__responsive-container {
+				width: calc(100vw - 2 * $nav-padding);
+				height: calc(100vh - 2 * $nav-padding);
+			}
 		}
 	}
 }
