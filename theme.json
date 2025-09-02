@@ -12,7 +12,7 @@
         {
           "name": "Base Dark",
           "slug": "base-dark",
-          "color": "hsl(255 100% 5%)"
+          "color": "hsl(250 35% 10%)"
         },
         {
           "name": "Base Light",
@@ -190,7 +190,8 @@
       "background": "var(--wp--preset--color--base-dark)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--poppins)"
+      "fontFamily": "var(--wp--preset--font-family--poppins)",
+      "fontSize": "18px"
     },
     "blocks": {
       "core/button": {
