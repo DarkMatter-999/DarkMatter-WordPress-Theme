@@ -209,15 +209,15 @@
         "spacing": {
           "margin": {
             "top": "1em",
-            "left": "1em",
+            "left": "0",
             "bottom": "1em",
-            "right": "1em"
+            "right": "0"
           },
           "padding": {
             "top": "0",
-            "left": "0",
+            "left": "1rem",
             "bottom": "0",
-            "right": "0"
+            "right": "1rem"
           }
         },
         "border": {
@@ -225,6 +225,11 @@
           "color": "var(--wp--preset--color--tertiery)",
           "width": "0.3em",
           "style": "solid"
+        }
+      },
+      "core/cover": {
+        "color": {
+          "background": "var(--wp--preset--color--base-dark)"
         }
       },
       "core/read-more": {
