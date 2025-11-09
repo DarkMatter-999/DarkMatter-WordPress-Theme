@@ -82,7 +82,8 @@ header {
 }
 
 main {
-	margin: var(--wp--preset--spacing--40);
+	padding: var(--wp--preset--spacing--40);
+	margin: 0;
 }
 
 .dm-hero {

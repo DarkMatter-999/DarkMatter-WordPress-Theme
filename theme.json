@@ -20,6 +20,11 @@
           "color": "hsl(257 58% 12%)"
         },
         {
+          "name": "Base Front",
+          "slug": "base-front",
+          "color": "hsl(255 100% 5%)"
+        },
+        {
           "name": "Contrast",
           "slug": "contrast",
           "color": "hsl(250 100% 100%)"
