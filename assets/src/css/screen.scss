@@ -177,7 +177,7 @@ main {
 	}
 
 	.wp-block-read-more {
-		width: 100%;
+		width: calc(100% - 2 * 0.3rem - 2 * 1rem);
 		margin: 0;
 	}
 }
