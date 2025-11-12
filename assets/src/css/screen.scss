@@ -36,7 +36,7 @@ header {
 		}
 	}
 
-	&.slidedown {
+	&.slidedown.dm-header.slidedown {
 		position: fixed;
 		animation: slidedown 0.3s forwards;
 		width: 90%;
