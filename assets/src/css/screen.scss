@@ -149,6 +149,10 @@ main {
 	.wp-block-query .wp-block-post .wp-block-group {
 		flex-direction: column;
 		width: 100%;
+
+		figure {
+			aspect-ratio: auto !important;
+		}
 	}
 }
 
