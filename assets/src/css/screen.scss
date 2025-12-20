@@ -144,6 +144,14 @@ main {
 	text-shadow: 0 0 20px var(--wp--preset--color--contrast);
 }
 
+@media (max-width: 600px) {
+
+	.wp-block-query .wp-block-post .wp-block-group {
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
 .dm-projects {
 
 	.wp-block-dm-project-plugin-project-block {

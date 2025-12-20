@@ -33,13 +33,13 @@
       <!-- wp:post-template {"layout":{"type":"constrained"}} -->
       <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
       <div class="wp-block-group">
-        <!-- wp:post-featured-image {"aspectRatio":"4/3","width":"50%","style":{"layout":{"selfStretch":"fill","flexSize":null}}} /-->
+        <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","sizeSlug":"large","style":{"layout":{"selfStretch":"fixed","flexSize":"100%"}}} /-->
 
-        <!-- wp:group {"style":{"layout":{"selfStretch":"fill","flexSize":null}},"layout":{"type":"constrained"}} -->
+        <!-- wp:group {"style":{"layout":{"selfStretch":"fixed","flexSize":"100%"}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group">
-          <!-- wp:post-title /-->
+          <!-- wp:post-title {"isLink":true} /-->
 
-          <!-- wp:post-date /-->
+          <!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /-->
 
           <!-- wp:post-excerpt {"moreText":"Read more..."} /-->
         </div>
