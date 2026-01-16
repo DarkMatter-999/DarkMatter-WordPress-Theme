@@ -30,7 +30,7 @@ class Assets {
 	 */
 	public function __construct() {
 		add_action( 'enqueue_block_assets', array( $this, 'enqueue_assets' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_assets' ) );
+		add_filter( 'style_loader_tag', array( $this, 'enqueue_non_critical_assets' ), 10, 2 );
 	}
 
 	/**
@@ -45,6 +45,15 @@ class Assets {
 			get_theme_file_uri( 'assets/build/css/screen.css' ),
 			$style_asset['dependencies'],
 			$style_asset['version']
+		);
+
+		$hand_asset = include get_theme_file_path( 'assets/build/css/hand.asset.php' );
+
+		wp_enqueue_style(
+			'hand',
+			get_theme_file_uri( 'assets/build/css/hand.css' ),
+			$hand_asset['dependencies'],
+			$hand_asset['version']
 		);
 
 		if ( is_front_page() ) {
@@ -64,23 +73,23 @@ class Assets {
 			get_theme_file_uri( 'assets/build/js/screen.js' ),
 			$script_asset['dependencies'],
 			$script_asset['version'],
-			true
+			array(
+				'strategy' => 'defer',
+			)
 		);
 	}
 
 	/**
-	 * Enqueues styles and scripts for the block editor.
+	 * Filters the style tag for non‑critical assets to load them asynchronously.
 	 *
-	 * @return void
+	 * @param string $html   The style tag HTML.
+	 * @param string $handle The style handle.
+	 * @return string Modified HTML with media attributes for asynchronous loading.
 	 */
-	public function enqueue_block_assets() {
-		$style_asset = include get_theme_file_path( 'assets/build/css/editor.asset.php' );
-
-		wp_enqueue_style(
-			'main-editor',
-			get_theme_file_uri( 'assets/build/css/editor.css' ),
-			$style_asset['dependencies'],
-			$style_asset['version']
-		);
+	public function enqueue_non_critical_assets( $html, $handle ) {
+		if ( 'hand' === $handle ) {
+			$html = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $html );
+		}
+		return $html;
 	}
 }

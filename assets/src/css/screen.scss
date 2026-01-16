@@ -1,14 +1,3 @@
-html {
-	cursor: url(../../images/pointinghand.svg) 4 4, url(../../images/pointinghand.png) 4 4, default;
-	scroll-behavior: smooth;
-}
-
-a,
-button,
-[role="button"] {
-	cursor: url(../../images/closedhand.svg) 4 4, url(../../images/closedhand.png) 4 4, pointer;
-}
-
 header {
 	height: 5rem;
 }
